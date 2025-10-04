@@ -9,3 +9,49 @@
 a {
     text-decoration: none;
 }
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+ul li {
+    position: absolute;
+    border: 8px solid #141414;
+    background: #141414;
+    border-radius: 50%;
+    transition: 0.5s;
+    width: 120px;
+    height: 120px;
+    transform: scale(0.15);
+}
+
+ul li:nth-child(1) {
+    left: -30px;
+}
+
+ul.active li:nth-child(2) {
+    transform: scale(1);
+    background: transparent;
+}
+
+ul li:nth-child(3) {
+    left: 30px;
+}
+
+ul.active li:nth-child(1) {
+    width: 360px;
+    border-radius: 0;
+    transition-delay: 0.5s;
+    transform: scale(0.1) translate(-250%, 0) rotate(135deg);
+}
+
+ul.active li:nth-child(3) {
+    height: 360px;
+    border-radius: 0;
+    transition-delay: 0.5s;
+    transform: scale(0.1) translate(-245%, -330%) rotate(135deg);
+}
