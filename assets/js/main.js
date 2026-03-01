@@ -1,5 +1,7 @@
-$(document).ready(function () {
-    $("ul").click(function () {
-        $("ul").toggleClass("active");
-    });
+const toggle = document.getElementById("toggleBtn");
+const body = document.body;
+
+toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    body.classList.toggle("active");
 });
